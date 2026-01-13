@@ -18,10 +18,10 @@ class MainActivity : AppCompatActivity() {
         myTextView = findViewById(R.id.myTextView)
 
         myButton.text = getString(R.string.button_text)
-    }
 
-    fun showMessage(view: View) {
-        myTextView.visibility = View.VISIBLE
-        myTextView.text = "Hello Kel"
+        myButton.setOnClickListener {
+            myTextView.visibility = View.VISIBLE
+            myTextView.text = getString(R.string.text_view_text)
+        }
     }
 }
