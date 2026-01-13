@@ -1,18 +1,27 @@
 package com.kelvinkamara.app
 
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var button: Button
+    private lateinit var myButton: Button
+    private lateinit var myTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.new_layout)
+        setContentView(R.layout.activity_main)
 
-        button = findViewById(R.id.button2)
-        button.text = getString(R.string.button_text)
+        myButton = findViewById(R.id.myButton)
+        myTextView = findViewById(R.id.myTextView)
+
+        myButton.text = getString(R.string.button_text)
+    }
+
+    fun showMessage(view: View) {
+        myTextView.visibility = View.VISIBLE
+        myTextView.text = "Hello Kel"
     }
 }
